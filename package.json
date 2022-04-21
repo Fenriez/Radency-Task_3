@@ -19,6 +19,9 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
-    "express": "^4.17.3"
+    "@types/yup": "^0.29.13",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0",
+    "yup": "^0.32.11"
   }
 }
