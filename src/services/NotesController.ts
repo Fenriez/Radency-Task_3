@@ -10,6 +10,7 @@ class NotesController {
       res.status(500).json(e);
     }
   }
+
   async getAll(req: Express.Request, res: Express.Response) {
     try {
       const notes = await NotesService.getAll();
@@ -18,6 +19,7 @@ class NotesController {
       res.status(500).json(e);
     }
   }
+
   async getStats(req: Express.Request, res: Express.Response) {
     try {
       const stats = await NotesService.getStats();
@@ -26,6 +28,7 @@ class NotesController {
       res.status(500).json(e);
     }
   }
+
   async getOne(req: Express.Request, res: Express.Response) {
     try {
       const note = await NotesService.getOne(req.params.id);
@@ -34,6 +37,7 @@ class NotesController {
       res.status(500).json(e);
     }
   }
+
   async update(req: Express.Request, res: Express.Response) {
     try {
       const updatedNote = await NotesService.update(req.params.id, req.body);
@@ -42,6 +46,7 @@ class NotesController {
       res.status(500).json(e);
     }
   }
+  
   async delete(req: Express.Request, res: Express.Response) {
     try {
       const note = await NotesService.delete(req.params.id);

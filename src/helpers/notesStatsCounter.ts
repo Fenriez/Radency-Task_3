@@ -1,4 +1,4 @@
-import { noteState } from "../NoteTypes";
+import { noteState } from "../repositories/notesDataTypes";
 
 export default function countStats(notes: noteState[]) {
   type resultType = {

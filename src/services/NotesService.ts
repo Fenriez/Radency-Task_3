@@ -1,8 +1,9 @@
-import countStats from "./helpers/notesStatsCounter";
-import Note, { noteState } from "./NoteTypes";
+import countStats from "../helpers/notesStatsCounter";
+import { noteData } from "../repositories/notesDataTypes";
+import Note from "../repositories/notesSchemas";
 
 class NotesService {
-  async create(data: noteState) {
+  async create(data: noteData) {
     const note = await Note.create({ ...data });
     return note;
   }
@@ -29,7 +30,7 @@ class NotesService {
     return note;
   }
 
-  async update(id: string, data: noteState) {
+  async update(id: string, data: noteData) {
     if (!id) {
       throw new Error("ID missing");
     }

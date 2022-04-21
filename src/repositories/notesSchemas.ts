@@ -10,12 +10,4 @@ const NoteSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-export interface noteState {
-  _id?: string;
-  name: string;
-  category: string;
-  text?: string;
-  isArchived: boolean;
-}
-
 export default mongoose.model("Note", NoteSchema);
